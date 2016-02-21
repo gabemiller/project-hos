@@ -1,0 +1,101 @@
+@keyframes horizontal-border {
+    0%   {transform: scale(0,1);}
+    100% {transform: scale(1,1);}
+}
+
+@keyframes vertical-border {
+    0%   {transform: scale(1,0);}
+    100% {transform: scale(1,1);}
+}
+
+.maintaince{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.center-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-150px, -150px);
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-hospice{
+    text-indent: -9999px;
+    overflow: hidden;
+    height: 200px;
+    width: auto;
+    background-image: url("../assets/logo-300.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.border-1,.border-2,.border-3,.border-4{
+    background-color: #009fe3;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    animation-fill-mode: backwards;
+}
+
+.border-1,.border-2{
+    width: 300px;
+    height: 10px;
+}
+
+.border-3,.border-4{
+    width: 10px;
+    height: 300px;
+}
+
+.border-1{
+    top: -5px;
+    left: 0;
+    transform-origin: left;
+    animation-name: horizontal-border;
+    animation-duration: .3s;
+    animation-delay: 0s;
+}
+
+.border-2{
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    animation-name: horizontal-border;
+    animation-duration: .3s;
+    animation-delay: .3s;
+}
+
+.border-3{
+    top: 0;
+    left: -5px;
+    transform-origin: bottom;
+    animation-name: vertical-border;
+    animation-duration: .3s;
+    animation-delay: .9s;
+}
+
+.border-4{
+    top:0;
+    right: -5px;
+    transform-origin: top;
+    animation-name: vertical-border;
+    animation-duration: .3s;
+    animation-delay: .6s;
+
+}
+
+.delay-1{
+    animation-delay: 1.2s;
+}
+
+.delay-2{
+    animation-delay: 1.5s;
+}
