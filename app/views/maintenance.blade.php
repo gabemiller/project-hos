@@ -26,8 +26,6 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-
-    <link href="/assets/favicon.ico" rel="icon" type="image/x-icon"/>
     <title>{{Setting::get('site-title')}} @if(!empty($title)) {{'- '.$title }} @endif</title>
 
     <!--[if lt IE 9]>
@@ -41,8 +39,10 @@
 <body class="maintaince">
 
 <div class="center-container">
-    <div class="logo-hospice animated fadeInUp delay-1">Erzsébet Hospice Alapítvány</div>
-    <p class="animated fadeInUp delay-2">A weboldal karbantartás alatt áll. <br>Kérjük látogasson vissza később!</p>
+    <div class="logo-hospice animated fadeInDown delay-1">Erzsébet Hospice Alapítvány</div>
+    <p class="maintaince-text animated fadeInUp delay-2">
+        A weboldal karbantartás alatt áll. <br>Kérjük látogasson vissza később!
+    </p>
     <span class="border-1"></span>
     <span class="border-2"></span>
     <span class="border-3"></span>
