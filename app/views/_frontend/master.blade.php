@@ -30,9 +30,7 @@
     <!--[if lt IE 9]>
     {{ HTML::script('//html5shim.googlecode.com/svn/trunk/html5.js') }}
     <![endif]-->
-    {{HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')}}
-    {{ HTML::style('css/bootstrap.min.css') }}
-    {{ HTML::style('css/divide.min.css') }}
+    {{ HTML::style('css/app.min.css') }}
 
 </head>
 <body>
@@ -73,10 +71,8 @@
 </div>
 @include('_frontend.footer')
 
-
-{{ HTML::script('js/jquery-2.1.1.min.js'); }}
-{{ HTML::script('js/bootstrap.min.js'); }}
-{{ HTML::script('js/divide.min.js'); }}
+{{ HTML::script('scripts/vendor.js'); }}
+{{ HTML::script('js/app.min.js'); }}
 
 </body>
 </html>
