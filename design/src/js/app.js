@@ -1,4 +1,9 @@
-/**
- * Created by Gabor Molnar
- * 2016.01.23.
- */
+$(document).ready(function () {
+    $('.main-nav-button').click(function () {
+        $('.main-nav').toggleClass('is-open');
+        $(this).toggleClass('is-open');
+    });
+});
+
+
+

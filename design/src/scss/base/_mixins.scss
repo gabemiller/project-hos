@@ -7,7 +7,11 @@
   background-color: $color;
 }
 
+@mixin transition($element:all, $delay:0ms , $time: 400ms, $easing: $e){
+  transition: $element $time $easing $delay;
+}
+
 // Convert px to rem
 @function convertPXtoREM($value){
-  @return $value / $base-font-size + 0rem;
+  @return $value / $baseFontSize + 0rem;
 }

@@ -1,24 +1,26 @@
-<header>
-    <div class="container">
-        <div class="header-pictures">
-            <div class="picture-pokrova header-element"></div>
-            <div class="picture-templom-1 header-element"></div>
-            <h1 class="picture-cross header-element">Görög Katolikus kereszt</h1>
-
-
-            <div class="picture-templom-2 header-element"></div>
-            <div class="picture-templom-3 header-element"></div>
-
-            <div class="picture-templom-4 header-element"></div>
-            <h1 class="header-element site-title">{{Setting::get('site-title')}}</h1>
-        </div>
-    </div>
+<header class="main-header">
+    <h1 class="main-header__logo">
+        <a href="/">Erzsébet Hospice Alapítvány Miskolc</a>
+    </h1>
+    <p class="main-header__slogen">
+        1994-től a daganatos betegek szolgálatában.
+    </p>
+    <button class="main-nav-button">
+        Menü
+    </button>
 </header>
 
-<nav class="main-navbar">
-    <div class="container">
-        <ul>
-            @include('_frontend.menu', array('items' => $mainMenu->roots()))
-        </ul>
-    </div>
+<nav class="main-nav">
+    <!--ul>
+        @include('_frontend.menu', array('items' => $mainMenu->roots()))
+    </ul-->
+    <ul>
+        <li><a href="#">Hírek</a></li>
+        <li><a href="#">Magunkról</a></li>
+        <li><a href="#">Egészségügyi szolgáltatások</a></li>
+        <li><a href="#">Önkéntesség</a></li>
+        <li><a href="#">Képzés</a></li>
+        <li><a href="#">Adománygyűjtési programjaink</a></li>
+    </ul>
 </nav>
+

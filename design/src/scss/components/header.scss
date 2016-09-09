@@ -1,0 +1,37 @@
+.main-header {
+  background-color: $colorWhite;
+  box-shadow: 1px 0 2px 2px $colorShadow;
+  width: 100%;
+  z-index: 400;
+  border-top: 6px solid $colorBlue;
+  min-height: 80px;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url("../images/logo_blue.png") center no-repeat transparent;
+    background-size: contain;
+    width: 60px;
+    height: 50px;
+    margin: 0;
+    a{
+      display: block;
+    }
+  }
+
+  &__slogen{
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+    width: 100%;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+}
