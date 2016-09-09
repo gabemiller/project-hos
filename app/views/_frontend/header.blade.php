@@ -5,10 +5,12 @@
     <p class="main-header__slogen">
         1994-től a daganatos betegek szolgálatában.
     </p>
-    <button class="main-nav-button">
-        Menü
-    </button>
 </header>
+
+<button class="main-nav-button">
+    Menü
+    <span class="line"></span>
+</button>
 
 <nav class="main-nav">
     <!--ul>

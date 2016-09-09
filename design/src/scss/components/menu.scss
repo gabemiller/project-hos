@@ -1,20 +1,71 @@
-.main-nav-button{
+.main-nav-button {
   background-color: transparent;
   border: 0;
-  position: absolute;
+  position: relative;
   right: 50px;
-  top: 50%;
-  transform: translate(0,-50%);
-  @include transition(transform);
+  top: -50px;
+  @include transition(color);
   text-transform: uppercase;
   font-weight: bold;
+  z-index: 500;
+  float: right;
+  &:hover {
+    color: $colorBlue;
+    .line {
+      background-color: $colorBlue;
+      &:before, &:after {
+        background-color: $colorBlue;
+      }
+    }
+  }
+  .line {
+    display: block;
+    position: absolute;
+    right: -25px;
+    top: 9.5px;
+    width: 20px;
+    height: 2px;
+    background-color: $colorDarkGray;
+    @include transition();
+    &:after, &:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 2px;
+      background-color: $colorDarkGray;
+      @include transition();
+    }
+    &:before {
+      top: -4px;
+    }
+    &:after {
+      top: 2px;
+    }
+  }
 
-  &.is-open{
-    transform: translate(-300px,-50%);
+  &.is-open {
+    position: fixed;
+    color: $colorWhite;
+    float: none;
+    right: 50px;
+    top: 36px;
+    .line {
+      background-color: transparent;
+      &:before, &:after {
+        background-color: $colorWhite;
+      }
+      &:before {
+        transform: translateY(4px) rotate(-45deg);
+      }
+      &:after {
+        transform: translateY(-4px) rotate(45deg);
+      }
+    }
   }
 }
 
-.main-nav{
+.main-nav {
   width: 320px;
   padding: 20px 0;
   position: fixed;
@@ -23,23 +74,40 @@
   bottom: 0;
   background-color: $colorBlue;
   z-index: 450;
-  border-top: 6px solid transparentize($colorBlack,0.65);
+  border-top: 6px solid transparentize($colorBlack, 0.65);
   transform: translateX(320px);
-  @include transition(transform,50ms);
-
-  &.is-open{
+  @include transition(transform);
+  box-shadow: 1px 0 2px 2px $colorShadow;
+  &.is-open {
     transform: translateX(0);
   }
-
-  ul{
+  ul {
     margin: 59px 0 0;
     padding: 0;
     list-style: none;
-
-    li{
+    li {
       padding: 5px 0;
-
-      a,a:visited{
+      position: relative;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        z-index: 490;
+        background-color: transparentize($colorBlack, 0.65);
+        @include transition(width);
+      }
+      &:hover{
+        &:before{
+          width: 100%;
+        }
+      }
+      a, a:visited {
+        position: relative;
+        z-index: 500;
         display: block;
         padding: 0 50px;
         color: $colorWhite;
@@ -48,17 +116,12 @@
         text-transform: uppercase;
         font-weight: bold;
         @include transition(opacity);
-
-        &:hover, &:active{
+        &:hover, &:active {
           color: white;
           opacity: 1;
           text-decoration: none;
         }
-
       }
-
     }
-
   }
-
 }

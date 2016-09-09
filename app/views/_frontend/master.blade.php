@@ -34,7 +34,7 @@
     {{ HTML::style('css/app.css') }}
 
 </head>
-<body>
+<body @if($bodyClass) class="{{$bodyClass}}" @endif>
 
 @include('_frontend.header')
 

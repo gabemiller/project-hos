@@ -6,7 +6,6 @@
   border-top: 6px solid $colorBlue;
   min-height: 80px;
   position: relative;
-
   &__logo {
     position: absolute;
     top: 50%;
@@ -23,7 +22,6 @@
       display: block;
     }
   }
-
   &__slogen{
     text-align: center;
     height: 80px;
@@ -33,5 +31,4 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-
 }
