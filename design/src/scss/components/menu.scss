@@ -1,4 +1,5 @@
 .main-nav-button {
+  @include clearfix;
   background-color: transparent;
   border: 0;
   position: relative;
@@ -49,7 +50,7 @@
     color: $colorWhite;
     float: none;
     right: 50px;
-    top: 36px;
+    top: 30px;
     .line {
       background-color: transparent;
       &:before, &:after {
@@ -86,7 +87,7 @@
     padding: 0;
     list-style: none;
     li {
-      padding: 5px 0;
+      padding: 0;
       position: relative;
       &:before{
         content: '';
@@ -109,7 +110,7 @@
         position: relative;
         z-index: 500;
         display: block;
-        padding: 0 50px;
+        padding: 5px 50px;
         color: $colorWhite;
         opacity: .8;
         font-size: .875rem;

@@ -35,7 +35,6 @@
 
 </head>
 <body @if($bodyClass) class="{{$bodyClass}}" @endif>
-
 @include('_frontend.header')
 
 <main class="main container">
@@ -50,7 +49,7 @@
         <div class="col-md-8">
             @yield('content')
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 visible-md visible-lg">
             <section class="card">
                 <h2 class="card__header">Title</h2>
                 <div class="card__content">Content</div>
