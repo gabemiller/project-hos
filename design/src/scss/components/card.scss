@@ -1,6 +1,5 @@
 .card{
   background-color: $colorWhite;
-  border: 0 solid $colorBorder;
   border-radius: 2px;
   box-shadow: 0 1px 5px $colorShadow2;
   color: #2a2a2a;
@@ -10,12 +9,51 @@
     margin-top: 30px;
   }
 
-  &__header{
-    font-size: 1.875rem;
+  &__title{
+    font-size: 1.25rem;
     padding-left: 10px;
     margin-top: 0;
+
+    &--onepercent{
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+  &__subtitle{
+    font-size: 1.125rem;
+    padding-left: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    &:not(:first-of-type){
+      margin-top: 30px;
+    }
   }
   &__content{
     padding-left: 10px;
+    margin: 0;
   }
+}
+
+.card--blue{
+  background-color: $colorBlue;
+  color: $colorWhite;
+}
+
+.card--image{
+  padding-bottom: 60%;
+}
+
+.card--erzsebet{
+  background: url("../images/erzsebet.jpg") center no-repeat transparent;
+  background-size: cover;
+  padding-bottom: 80%;
+}
+
+.card--molino{
+  background: url("../images/molino.jpg") center no-repeat transparent;
+  background-size: cover;
+  padding-bottom: 200%;
 }

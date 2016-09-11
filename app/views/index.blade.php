@@ -5,6 +5,9 @@
 @stop
 
 @section('content')
+    <div class="main__welcome">
+        <a href="http://www.adhatvonal.hu/?cgen=szervezet-adatlap&id=1196"></a>
+    </div>
     <div class="articles">
         @foreach($articles as $article)
             <article class="articles-item">

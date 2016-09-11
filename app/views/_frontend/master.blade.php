@@ -50,25 +50,18 @@
             @yield('content')
         </div>
         <div class="col-md-4 visible-md visible-lg">
-            <section class="card">
-                <h2 class="card__header">Title</h2>
-                <div class="card__content">Content</div>
+            <section class="card card--image card--erzsebet">
             </section>
             <section class="card">
-                <h2 class="card__header">Title</h2>
-                <div class="card__content">Content</div>
+                <h2 class="card__subtitle">Számlaszám</h2>
+                <p class="card__content">11734004-20394369</p>
+                <h2 class="card__subtitle">Adószám</h2>
+                <p class="card__content">18414020-1-05</p>
             </section>
-            <section class="card">
-                <h2 class="card__header">Title</h2>
-                <div class="card__content">Content</div>
+            <section class="card card--blue">
+                <h2 class="card__title card__title--onepercent">Kérjük ajánlja fel személyi jövedelmadójának 1%-át </h2>
             </section>
-            <section class="card">
-                <h2 class="card__header">Title</h2>
-                <div class="card__content">Content</div>
-            </section>
-            <section class="card">
-                <h2 class="card__header">Title</h2>
-                <div class="card__content">Content</div>
+            <section class="card card--image card--molino">
             </section>
             @yield('sidebar')
         </div>

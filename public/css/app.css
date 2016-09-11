@@ -2537,6 +2537,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .main {
   margin: 60px auto 60px; }
+  .main__welcome {
+    background: url("../images/adhat.jpg") center no-repeat transparent;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 60%;
+    box-shadow: 0 1px 5px #dcdcdc;
+    position: relative; }
+    .main__welcome a {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
 
 .main-nav-button {
   background-color: transparent;
@@ -2649,16 +2663,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .card {
   background-color: #FFF;
-  border: 0 solid rgba(255, 255, 255, 0.25);
   border-radius: 2px;
   box-shadow: 0 1px 5px #dcdcdc;
   color: #2a2a2a;
   padding: 20px 0; }
   .card:not(:first-of-type) {
     margin-top: 30px; }
-  .card__header {
-    font-size: 1.875rem;
+  .card__title {
+    font-size: 1.25rem;
     padding-left: 10px;
     margin-top: 0; }
+    .card__title--onepercent {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      line-height: 1.5; }
+  .card__subtitle {
+    font-size: 1.125rem;
+    padding-left: 10px;
+    margin-top: 0;
+    text-transform: uppercase; }
+    .card__subtitle:not(:first-of-type) {
+      margin-top: 30px; }
   .card__content {
-    padding-left: 10px; }
+    padding-left: 10px;
+    margin: 0; }
+
+.card--blue {
+  background-color: #009FE3;
+  color: #FFF; }
+
+.card--image {
+  padding-bottom: 60%; }
+
+.card--erzsebet {
+  background: url("../images/erzsebet.jpg") center no-repeat transparent;
+  background-size: cover;
+  padding-bottom: 80%; }
+
+.card--molino {
+  background: url("../images/molino.jpg") center no-repeat transparent;
+  background-size: cover;
+  padding-bottom: 200%; }
