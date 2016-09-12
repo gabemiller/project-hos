@@ -11,21 +11,25 @@
     <div class="articles">
         @foreach($articles as $article)
             <article class="articles-item">
-                    @if(count($article->gallery) && count($article->gallery->pictures))
-                        <img class="img-responsive articles-item__image"
-                             src="{{URl::route('kep.show',['url'=>urlencode($article->gallery->pictures[0]->picture_path),'width'=>300,'height'=>200]) }}"
-                             alt="{{$article->gallery->pictures[0]->name}}"
-                             title="{{$article->gallery->pictures[0]->name}}"/>
-                    @endif
+                @if(count($article->gallery) && count($article->gallery->pictures))
+                    <div class="articles-item__image"
+                         style="background-image: url('{{$article->gallery->pictures[0]->picture_path}}')"></div>
+                @endif
+                <header>
                     <h2 class="articles-item__title">{{HTML::linkRoute('hirek.show',$article->title,array('id'=>$article->id,'title'=>\Str::slug($article->title)))}}</h2>
+                </header>
+                <section>
+                    <p class="articles-item__content">{{$article->getParragraph()}}</p>
+                    {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'articles-item__button'))}}
+                </section>
+                <footer>
                     <p class="articles-item__info">{{$article->getCreatedAt()}}</p>
-                    <p class="article-content">{{$article->getParragraph()}}</p>
-                    {{HTML::linkRoute('hirek.show','Bővebben',array('id'=>$article->id,'title'=>\Str::slug($article->title)),array('class'=>'articles-item__button btn btn-sm'))}}
+                </footer>
             </article>
         @endforeach
-    </div>
 
-    <div class="text-center">
-        {{$articles->links()}}
+        <div class="articles-pagination">
+            {{$articles->links()}}
+        </div>
     </div>
 @stop

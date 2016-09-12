@@ -2543,7 +2543,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     padding-bottom: 60%;
     box-shadow: 0 1px 5px #dcdcdc;
-    position: relative; }
+    position: relative;
+    margin-bottom: 30px; }
     .main__welcome a {
       display: block;
       position: absolute;
@@ -2705,3 +2706,59 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../images/molino.jpg") center no-repeat transparent;
   background-size: cover;
   padding-bottom: 200%; }
+
+.articles .articles-item {
+  box-shadow: 0 1px 5px #dcdcdc;
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #FFF; }
+  .articles .articles-item__image {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 40%; }
+  .articles .articles-item__title {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.5; }
+    .articles .articles-item__title a, .articles .articles-item__title a:visited {
+      color: #333;
+      transition: color 400ms cubic-bezier(0.395, 0.425, 0.015, 1) 0ms; }
+      .articles .articles-item__title a:hover, .articles .articles-item__title a:active, .articles .articles-item__title a:visited:hover, .articles .articles-item__title a:visited:active {
+        color: #009FE3;
+        text-decoration: none; }
+  .articles .articles-item__content {
+    line-height: 2; }
+  .articles .articles-item__button, .articles .articles-item__button:visited {
+    color: #009FE3;
+    text-transform: uppercase;
+    font-size: .75rem;
+    position: relative; }
+    .articles .articles-item__button:after, .articles .articles-item__button:visited:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #009FE3;
+      transition: width 400ms cubic-bezier(0.395, 0.425, 0.015, 1) 0ms; }
+    .articles .articles-item__button:hover, .articles .articles-item__button:active, .articles .articles-item__button:visited:hover, .articles .articles-item__button:visited:active {
+      text-decoration: none; }
+      .articles .articles-item__button:hover:after, .articles .articles-item__button:active:after, .articles .articles-item__button:visited:hover:after, .articles .articles-item__button:visited:active:after {
+        width: 100%; }
+    .articles .articles-item__button:focus, .articles .articles-item__button:visited:focus {
+      text-decoration: none; }
+  .articles .articles-item__info {
+    margin: 0; }
+  .articles .articles-item header, .articles .articles-item section, .articles .articles-item footer {
+    padding: 0 15px 15px; }
+  .articles .articles-item header {
+    padding-top: 15px; }
+  .articles .articles-item footer {
+    border-top: 1px solid #e8e8e8;
+    background-color: #f8f8f8;
+    padding-top: 15px; }
