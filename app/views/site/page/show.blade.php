@@ -3,30 +3,26 @@
     {{ HTML::decode(Breadcrumbs::render('oldalak.show',$page)) }}
 @stop
 @section('content')
-    <div class="page">
-
-        <h1>{{$page->title}}</h1>
-
-        <div class="page-content">
+    <article class="page">
+        <header class="page__header">
+            <h1>{{$page->title}}</h1>
+        </header>
+        <section class="page__content">
             {{$page->content}}
-        </div>
-
-        @if(count($page->gallery)!=0 && count($page->gallery->pictures)!=0)
-            <h4>Galéria</h4>
-
-            <div class="page-gallery">
-                <div class="page-carousel owl-carousel">
-                    @foreach($page->gallery->pictures as $picture)
-                        <div>
-                            <a href="{{URL::to($picture->picture_path)}}" title="{{$picture->name}}" data-gallery>
-                                <img class="img-responsive" src="{{URL::to($picture->thumbnail_path)}}" alt="{{$picture->name}}"
-                                     title="{{$picture->name}}"/>
-                            </a>
-                        </div>
-                    @endforeach
-                </div>
+        </section>
+    </article>
+    @if(count($page->gallery)!=0 && count($page->gallery->pictures)!=0)
+        <div class="page__gallery">
+            <div class="page__carousel owl-carousel">
+                @foreach($page->gallery->pictures as $picture)
+                    <div>
+                        <a href="{{URL::to($picture->picture_path)}}" data-title="{{$picture->name}}" data-lightbox="{{$page->gallery->name}}">
+                            <img class="img-responsive" src="{{URL::to($picture->thumbnail_path)}}" alt="{{$picture->name}}"
+                                 title="{{$page->gallery->name}}"/>
+                        </a>
+                    </div>
+                @endforeach
             </div>
-        @endif
-
-    </div>
+        </div>
+    @endif
 @stop

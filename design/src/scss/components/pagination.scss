@@ -1,0 +1,23 @@
+.pagination {
+  margin: 0;
+  li {
+    &.disabled {
+      span {
+        background-color: lighten($colorLightGray, 2%);
+        cursor: default !important;
+      }
+    }
+    &.active {
+      span {
+        background-color: $colorBlue !important;
+      }
+    }
+    a, a:visited {
+      color: $colorBlue;
+      @include transition();
+      &:hover, &:active {
+        background-color: lighten($colorLightGray, 2%);
+      }
+    }
+  }
+}

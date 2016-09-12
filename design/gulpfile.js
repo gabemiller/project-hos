@@ -38,7 +38,7 @@ gulp.task('scss', function() {
  */
 gulp.task('vendor', function (callback) {
     gulp.src([
-            // JQuery and plugins
+            // JQuery
             './bower_components/jquery/dist/jquery.js',
 
             // jQuery UI components
@@ -64,9 +64,13 @@ gulp.task('vendor', function (callback) {
             // './bower_components/bootstrap-js-components/dist/dropdown.js',
             // './bower_components/bootstrap-js-components/dist/affix.js',
 
+            // Plugins
+            './bower_components/lightbox2/dist/lightbox.js',
+            './bower_components/owl.carousel/dist/owl.carousel.js'
+
         ])
-        .pipe(concat({path: 'vendor.js'}))
-        .pipe(uglify({}))
+        .pipe(concat('vendor.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('../public/scripts'));
 });
 

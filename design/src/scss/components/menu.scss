@@ -89,7 +89,7 @@
     li {
       padding: 0;
       position: relative;
-      &:before{
+      &:before {
         content: '';
         display: block;
         position: absolute;
@@ -101,9 +101,14 @@
         background-color: transparentize($colorBlack, 0.65);
         @include transition(width);
       }
-      &:hover{
-        &:before{
+      &:hover {
+        &:before {
           width: 100%;
+        }
+      }
+      &.active {
+        a, a:visited {
+          opacity: 1;
         }
       }
       a, a:visited {
@@ -120,6 +125,9 @@
         &:hover, &:active {
           color: white;
           opacity: 1;
+          text-decoration: none;
+        }
+        &:focus{
           text-decoration: none;
         }
       }

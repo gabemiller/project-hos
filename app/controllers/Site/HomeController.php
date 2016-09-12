@@ -10,6 +10,7 @@ class HomeController extends \BaseController {
 
     protected $layout = '_frontend.master';
 
+
     /**
      * Display a listing of the resource.
      * GET /site\index
@@ -22,7 +23,7 @@ class HomeController extends \BaseController {
         $article = Article::where('published', '=', true)
             ->orderBy('created_at', 'DESC')
             ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
-            ->paginate(6);
+            ->paginate(5);
 
         $this->layout->content = View::make('index')
             ->with('articles', $article);

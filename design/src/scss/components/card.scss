@@ -10,7 +10,7 @@
   }
 
   &__title{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding-left: 10px;
     margin-top: 0;
 
@@ -22,7 +22,7 @@
     }
   }
   &__subtitle{
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     padding-left: 10px;
     margin-top: 0;
     text-transform: uppercase;
@@ -32,6 +32,7 @@
     }
   }
   &__content{
+    font-size: 1.125rem;
     padding-left: 10px;
     margin: 0;
   }

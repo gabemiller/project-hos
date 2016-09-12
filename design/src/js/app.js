@@ -3,6 +3,8 @@ $(document).ready(function () {
         $('.main-nav').toggleClass('is-open');
         $(this).toggleClass('is-open');
     });
+
+    $('.owl-carousel').owlCarousel();
 });
 
 
