@@ -4,12 +4,17 @@ $(document).ready(function () {
         $(this).toggleClass('is-open');
     });
 
-    $('.owl-carousel').owlCarousel();
+    $('.owl-carousel').owlCarousel({
+        'loop':true,
+        'margin':15,
+        'autoplay':true
+    });
 
     lightbox.option({
         'alwaysShowNavOnTouchDevices': true,
         'wrapAround': true,
         'disableScrolling': true,
+        'albumLabel': ''
     })
 });
 
