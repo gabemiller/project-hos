@@ -1,7 +1,4 @@
 @extend('_frontend.master')
-@section('breadcrumb')
-{{ HTML::decode(Breadcrumbs::render('galeriak.index')) }}
-@stop
 @section('content')
 <div class="gallery">
     <ul class="row list-unstyled">

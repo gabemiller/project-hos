@@ -1,7 +1,4 @@
 @extend('_frontend.master')
-@section('breadcrumb')
-    {{ HTML::decode(Breadcrumbs::render('oldalak.show',$page)) }}
-@stop
 @section('content')
     <article class="page">
         <header class="page__header">

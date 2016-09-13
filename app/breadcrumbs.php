@@ -4,63 +4,13 @@
  * -----------------------------------------------------------------------------
  * Site
  * -----------------------------------------------------------------------------
- * 
- * A cms-hez tartozó breadcrumb-ok.
- * 
  */
 
-Breadcrumbs::register('fooldal', function($breadcrumbs) {
-    $breadcrumbs->push('<i class="fa fa-home"></i>', route('fooldal'));
-});
-
-Breadcrumbs::register('hirek.show', function($breadcrumbs,$article) {
-    $breadcrumbs->parent('fooldal');
-    $breadcrumbs->push($article->title, route('hirek.show',$article->id));
-});
-
-Breadcrumbs::register('hirek.tag', function($breadcrumbs,$tag) {
-    $breadcrumbs->parent('fooldal');
-    $breadcrumbs->push('Hírek', route('fooldal'));
-    $breadcrumbs->push($tag->name,route('hirek.tag',$tag->slug));
-});
-
-Breadcrumbs::register('esemenyek.index', function($breadcrumbs) {
-    $breadcrumbs->parent('fooldal');
-    $breadcrumbs->push('Események', route('esemenyek.index'));
-});
-
-Breadcrumbs::register('esemenyek.show', function($breadcrumbs,$event) {
-    $breadcrumbs->parent('esemenyek.index');
-    $breadcrumbs->push($event->title, route('esemenyek.show',$event->id));
-});
-
-Breadcrumbs::register('esemenyek.tag', function($breadcrumbs,$tag) {
-    $breadcrumbs->parent('esemenyek.index');
-    $breadcrumbs->push($tag->name,route('hirek.tag',$tag->slug));
-});
-
-Breadcrumbs::register('galeriak.index', function($breadcrumbs) {
-    $breadcrumbs->parent('fooldal');
-    $breadcrumbs->push('Galériák', route('galeriak.index'));
-});
-
-Breadcrumbs::register('galeriak.show', function($breadcrumbs,$gallery) {
-    $breadcrumbs->parent('galeriak.index');
-    $breadcrumbs->push($gallery->name, route('galeriak.show',$gallery->id));
-});
-
-Breadcrumbs::register('oldalak.show', function($breadcrumbs,$page) {
-    $breadcrumbs->parent('fooldal');
-    $breadcrumbs->push($page->title, route('oldalak.show',$page->id));
-});
 
 /**
  * -----------------------------------------------------------------------------
  * Admin
  * -----------------------------------------------------------------------------
- * 
- * A adminhoz tartozó breadcrumb-ok.
- * 
  */
 
 Breadcrumbs::register('admin.vezerlopult', function($breadcrumbs) {

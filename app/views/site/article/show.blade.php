@@ -14,7 +14,7 @@
     </article>
     @if(count($article->gallery)!=0 && count($article->gallery->pictures)!=0)
         <div class="page__gallery">
-            <div class="page__carousel owl-carousel">
+            <div class="page__carousel owl-carousel owl-theme">
                 @foreach($article->gallery->pictures as $picture)
                     <div>
                         <a href="{{URL::to($picture->picture_path)}}" data-title="{{$picture->name}}" data-lightbox="{{$article->gallery->name}}">

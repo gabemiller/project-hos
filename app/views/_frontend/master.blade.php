@@ -27,51 +27,42 @@
     <meta name="theme-color" content="#ffffff">
 
     <title>{{Setting::get('site-title')}} @if(!empty($title)) {{'- '.$title }} @endif</title>
-
-    <!--[if lt IE 9]>
-    {{ HTML::script('//html5shim.googlecode.com/svn/trunk/html5.js') }}
-    <![endif]-->
+    
     {{ HTML::style('css/app.css') }}
 
 </head>
 <body @if($bodyClass) class="{{$bodyClass}}" @endif>
-@include('_frontend.header')
 
-<main class="main container">
+    @include('_frontend.header')
 
-    <!--div class="row">
-        <div class="col-xs-12">
-            @yield('breadcrumb')
+    <main class="main container">
+        <div class="row">
+            <div class="col-md-8">
+                @yield('content')
+            </div>
+            <div class="col-md-4 visible-md visible-lg">
+                <section class="card card--image card--erzsebet">
+                </section>
+                <section class="card">
+                    <h2 class="card__subtitle">Számlaszám</h2>
+                    <p class="card__content">11734004-20394369</p>
+                    <h2 class="card__subtitle">Adószám</h2>
+                    <p class="card__content">18414020-1-05</p>
+                </section>
+                <section class="card card--blue">
+                    <h2 class="card__title card__title--onepercent">Kérjük ajánlja fel személyi jövedelmadójának 1%-át </h2>
+                </section>
+                <section class="card card--image card--molino">
+                </section>
+                @yield('sidebar')
+            </div>
         </div>
-    </div-->
+    </main>
 
-    <div class="row">
-        <div class="col-md-8">
-            @yield('content')
-        </div>
-        <div class="col-md-4 visible-md visible-lg">
-            <section class="card card--image card--erzsebet">
-            </section>
-            <section class="card">
-                <h2 class="card__subtitle">Számlaszám</h2>
-                <p class="card__content">11734004-20394369</p>
-                <h2 class="card__subtitle">Adószám</h2>
-                <p class="card__content">18414020-1-05</p>
-            </section>
-            <section class="card card--blue">
-                <h2 class="card__title card__title--onepercent">Kérjük ajánlja fel személyi jövedelmadójának 1%-át </h2>
-            </section>
-            <section class="card card--image card--molino">
-            </section>
-            @yield('sidebar')
-        </div>
-    </div>
+    @include('_frontend.footer')
 
-</main>
-@include('_frontend.footer')
-
-{{ HTML::script('scripts/vendor.js'); }}
-{{ HTML::script('scripts/app.js'); }}
+    {{ HTML::script('scripts/vendor.js'); }}
+    {{ HTML::script('scripts/app.js'); }}
 
 </body>
 </html>
