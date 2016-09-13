@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <title>{{Setting::get('site-title')}} @if(!empty($title)) {{'- '.$title }} @endif</title>
-    
+
     {{ HTML::style('css/app.css') }}
 
 </head>

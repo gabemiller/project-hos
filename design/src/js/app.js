@@ -5,6 +5,12 @@ $(document).ready(function () {
     });
 
     $('.owl-carousel').owlCarousel();
+
+    lightbox.option({
+        'alwaysShowNavOnTouchDevices': true,
+        'wrapAround': true,
+        'disableScrolling': true,
+    })
 });
 
 

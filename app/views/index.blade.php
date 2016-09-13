@@ -1,9 +1,4 @@
 @extends('_frontend.master')
-
-@section('breadcrumb')
-    {{ HTML::decode(Breadcrumbs::render('fooldal')) }}
-@stop
-
 @section('content')
     <div class="main__welcome">
         <a href="http://www.adhatvonal.hu/?cgen=szervezet-adatlap&id=1196"></a>

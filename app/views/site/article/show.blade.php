@@ -14,14 +14,12 @@
     </article>
     @if(count($article->gallery)!=0 && count($article->gallery->pictures)!=0)
         <div class="page__gallery">
-            <div class="page__carousel owl-carousel owl-theme">
+            <div class="page__carousel">
                 @foreach($article->gallery->pictures as $picture)
-                    <div>
-                        <a href="{{URL::to($picture->picture_path)}}" data-title="{{$picture->name}}" data-lightbox="{{$article->gallery->name}}">
-                            <img class="img-responsive" src="{{URL::to($picture->thumbnail_path)}}" alt="{{$picture->name}}"
-                                 title="{{$article->gallery->name}}"/>
-                        </a>
-                    </div>
+                    <a href="{{URL::to($picture->picture_path)}}" data-title="{{$picture->name}}" data-lightbox="{{$article->gallery->name}}">
+                        <img class="img-responsive" src="{{URL::to($picture->thumbnail_path)}}" alt="{{$picture->name}}"
+                             title="{{$article->gallery->name}}"/>
+                    </a>
                 @endforeach
             </div>
         </div>

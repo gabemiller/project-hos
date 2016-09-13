@@ -65,7 +65,7 @@ gulp.task('vendor', function (callback) {
             // './bower_components/bootstrap-js-components/dist/affix.js',
 
             // Plugins
-            './bower_components/lightbox2/dist/lightbox.js',
+            './bower_components/lightbox2/dist/js/lightbox.js',
             './bower_components/owl.carousel/dist/owl.carousel.js'
 
         ])
