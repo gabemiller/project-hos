@@ -1,7 +1,4 @@
 @extend('_frontend.master')
-@section('breadcrumb')
-{{ HTML::decode(Breadcrumbs::render('galeriak.show',$gallery)) }}
-@stop
 @section('content')
 <div class="gallery">
     <h1>{{$gallery->name}}</h1>

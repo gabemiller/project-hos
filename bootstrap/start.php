@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
     'production' => array('divide-server'),
-    'developement' => array('Paralelo','.dev','localhost','.local'),
+    'development' => array('Paralelo','.dev','localhost','.local'),
 ));
 
 /*

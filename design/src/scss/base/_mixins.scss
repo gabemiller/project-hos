@@ -1,0 +1,17 @@
+// Add background image easily
+@mixin background-image($url,$size:cover,$repeat:no-repeat,$position:center,$color:transparent){
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+  background-color: $color;
+}
+
+@mixin transition($element:all, $delay:0ms , $time: 400ms, $easing: $e){
+  transition: $element $time $easing $delay;
+}
+
+// Convert px to rem
+@function convertPXtoREM($value){
+  @return $value / $baseFontSize + 0rem;
+}

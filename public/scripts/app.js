@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".main-nav-button").click(function(){$(".main-nav").toggleClass("is-open"),$(this).toggleClass("is-open")}),$(".owl-carousel").owlCarousel({loop:!0,margin:15,autoplay:!0}),lightbox.option({alwaysShowNavOnTouchDevices:!0,wrapAround:!0,disableScrolling:!0,albumLabel:""})});

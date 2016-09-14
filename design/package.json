@@ -1,0 +1,31 @@
+{
+  "name": "web-development-bootstrap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabor Molnar <gabormolnar92@gmail.com>",
+  "license": "MIT",
+  "description": "Bootstrap for web development",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabemiller/web-development-bootstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gabemiller/web-development-bootstrap/issues"
+  },
+  "homepage": "https://github.com/gabemiller/web-development-bootstrap#readme"
+}

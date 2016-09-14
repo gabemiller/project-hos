@@ -1,0 +1,84 @@
+.articles {
+  .articles-item {
+    box-shadow: 0 1px 5px $colorShadow2;
+    position: relative;
+    margin-bottom: 30px;
+    background-color: $colorWhite;
+    &__image {
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      padding-bottom: 40%;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 1.75rem;
+      line-height: 1.5;
+      a, a:visited {
+        color: $colorDarkGray;
+        @include transition(color);
+        &:hover, &:active {
+          color: $colorBlue;
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    &__content {
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+
+    &__button, &__button:visited {
+      color: $colorBlue;
+      text-transform: uppercase;
+      font-size: .875rem;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $colorBlue;
+        @include transition(width);
+      }
+      &:hover, &:active {
+        text-decoration: none;
+        &:after{
+          width: 100%;
+        }
+      }
+      &:focus{
+        text-decoration: none;
+      }
+    }
+
+    &__info{
+      margin: 0;
+    }
+
+    header, section, footer {
+      padding: 0 15px 15px;
+    }
+
+    header{
+      padding-top: 15px;
+    }
+
+    footer {
+      border-top: 1px solid $colorBorder;
+      background-color: lighten($colorLightGray, 1%);
+      padding-top: 15px;
+    }
+  }
+  .articles-pagination{
+    text-align: center;
+  }
+}

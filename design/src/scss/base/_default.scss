@@ -1,0 +1,20 @@
+html{
+  font-size: $baseFontSize + px !important;
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  background-color: $colorLightGray;
+  font-family: $fontOpenSans;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $fontMontserrat;
+}

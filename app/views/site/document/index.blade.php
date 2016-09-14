@@ -2,11 +2,6 @@
 @section('page-title')
 <h1>Letölthető dokumentumok</h1>
 @stop
-
-@section('breadcrumb')
-{{-- HTML::decode(Breadcrumbs::render('')) --}}
-@stop
-
 @section('sidebar')
 <h3>Kategóriák</h3>
 <ul class="list-unstyled list-category">
@@ -17,10 +12,8 @@
     @endforeach
 </ul>
 @stop
-
 @section('content')
 <div class="documents">
-
     <div class="table-responsive">
         <table class="table table-middle">
             <tbody>

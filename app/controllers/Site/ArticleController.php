@@ -21,7 +21,7 @@ class ArticleController extends \BaseController {
         $article = Article::where('published', '=', true)
             ->orderBy('created_at', 'DESC')
             ->select(['id', 'title', 'author_id', 'created_at', 'content','gallery_id'])
-            ->paginate(6);
+            ->paginate(5);
 
         $this->layout->content = View::make('site.article.index')
             ->with('articles', $article);
