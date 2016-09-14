@@ -5,7 +5,7 @@
         </ul>
     </nav>
     <h1 class="main-footer__logo">
-        Erzsébet Hospice Alapítvány Miskolc
+        {{Setting::get('site-title')}}
     </h1>
     <div class="main-footer__credits">
         <a href="http://divide.hu">

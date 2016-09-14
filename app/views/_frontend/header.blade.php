@@ -1,6 +1,6 @@
 <header class="main-header">
     <h1 class="main-header__logo">
-        <a href="/">Erzsébet Hospice Alapítvány Miskolc</a>
+        <a href="/">{{Setting::get('site-title')}}</a>
     </h1>
     <p class="main-header__slogen">
         1994-től a daganatos betegek szolgálatában.
