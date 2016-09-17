@@ -2536,6 +2536,9 @@ body {
   background-color: #F5F5F5;
   font-family: "Open Sans", sans-serif;
   margin-top: 110px; }
+  @media screen and (max-width: 767px) {
+    body.remove-scrollbar {
+      overflow-y: hidden; } }
 
 *:focus {
   outline: none; }
@@ -2711,7 +2714,8 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (max-width: 767px) {
     .main-nav {
       width: 100%;
-      transform: translateX(100%); } }
+      transform: translateX(100%);
+      overflow-y: scroll; } }
   .main-nav.is-open {
     transform: translateX(0); }
   .main-nav ul {
