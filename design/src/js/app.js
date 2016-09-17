@@ -2,6 +2,7 @@
     $('.main-nav-button').click(function () {
         $('.main-nav').toggleClass('is-open');
         $(this).toggleClass('is-open');
+        $('body').toggleClass('remove-scrollbar');
     });
 
     $('.owl-carousel').owlCarousel({

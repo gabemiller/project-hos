@@ -10,6 +10,11 @@ body{
   background-color: $colorLightGray;
   font-family: $fontOpenSans;
   margin-top: 110px;
+  &.remove-scrollbar{
+    @media screen and (max-width: 767px) {
+      overflow-y: hidden;
+    }
+  }
 }
 
 *:focus {
