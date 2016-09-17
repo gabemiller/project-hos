@@ -1,4 +1,4 @@
-$(document).ready(function () {
+(function ($) {
     $('.main-nav-button').click(function () {
         $('.main-nav').toggleClass('is-open');
         $(this).toggleClass('is-open');
@@ -20,14 +20,13 @@ $(document).ready(function () {
     var baseUrl = window.location.host;
 
     $('body').on('click',
-        "a[href^='http:']:not([href*='" + baseUrl + "']), "+
-        "a[href^='https:']:not([href*='" + baseUrl + "']), "+
-        "a[href$='.pdf']:not([href*='" + baseUrl + "']), "+
-        "a[href$='.pdf'], "+
+        "a[href^='http:']:not([href*='" + baseUrl + "']), " +
+        "a[href^='https:']:not([href*='" + baseUrl + "']), " +
+        "a[href$='.pdf']:not([href*='" + baseUrl + "']), " +
+        "a[href$='.pdf'], " +
         "a.external", function () {
-        $(this).attr('target', '_blank');
-    });
-});
-
+            $(this).attr('target', '_blank');
+        });
+})(jQuery);
 
 

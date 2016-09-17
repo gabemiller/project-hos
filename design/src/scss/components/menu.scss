@@ -2,14 +2,14 @@
   @include clearfix;
   background-color: transparent;
   border: 0;
-  position: relative;
+  position: absolute;
   right: 50px;
-  top: -50px;
+  top: 26px;
+  padding-right: 30px;
   @include transition(color);
   text-transform: uppercase;
   font-weight: bold;
   z-index: 500;
-  float: right;
   &:hover {
     color: $colorBlue;
     .line {
@@ -22,7 +22,7 @@
   .line {
     display: block;
     position: absolute;
-    right: -25px;
+    right: 0;
     top: 9.5px;
     width: 20px;
     height: 2px;
@@ -44,18 +44,10 @@
       top: 2px;
     }
   }
-
   &.is-open {
-    position: fixed;
-    color: $colorWhite;
-    float: none;
-    right: 50px;
-    top: 30px;
     .line {
       background-color: transparent;
-      &:before, &:after {
-        background-color: $colorWhite;
-      }
+      transform: rotate(180deg);
       &:before {
         transform: translateY(4px) rotate(-45deg);
       }
@@ -71,19 +63,22 @@
   padding: 20px 0;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 80px;
   bottom: 0;
   background-color: $colorBlue;
-  z-index: 450;
-  border-top: 6px solid transparentize($colorBlack, 0.65);
+  z-index: 400;
   transform: translateX(320px);
   @include transition(transform);
   box-shadow: 1px 0 2px 2px $colorShadow;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    transform: translateX(100%);
+  }
   &.is-open {
     transform: translateX(0);
   }
   ul {
-    margin: 59px 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
     li {
@@ -97,7 +92,7 @@
         left: 0;
         bottom: 0;
         width: 0;
-        z-index: 490;
+        z-index: 410;
         background-color: transparentize($colorBlack, 0.65);
         @include transition(width);
       }
@@ -113,7 +108,7 @@
       }
       a, a:visited {
         position: relative;
-        z-index: 500;
+        z-index: 420;
         display: block;
         padding: 5px 50px;
         color: $colorWhite;

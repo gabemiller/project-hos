@@ -2,10 +2,11 @@
   background-color: $colorWhite;
   box-shadow: 1px 0 2px 2px $colorShadow;
   width: 100%;
-  z-index: 400;
+  z-index: 450;
   border-top: 6px solid $colorBlue;
   min-height: 80px;
-  position: relative;
+  position: fixed;
+  top: 0;
   &__logo {
     position: absolute;
     top: 50%;
