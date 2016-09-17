@@ -63,8 +63,9 @@
   padding: 20px 0;
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 0;
   bottom: 0;
+  padding-top: 110px;
   background-color: $colorBlue;
   z-index: 400;
   transform: translateX(320px);
@@ -74,6 +75,7 @@
     width: 100%;
     transform: translateX(100%);
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   &.is-open {
     transform: translateX(0);

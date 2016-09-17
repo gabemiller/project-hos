@@ -2536,9 +2536,6 @@ body {
   background-color: #F5F5F5;
   font-family: "Open Sans", sans-serif;
   margin-top: 110px; }
-  @media screen and (max-width: 767px) {
-    body.remove-scrollbar {
-      overflow-y: hidden; } }
 
 *:focus {
   outline: none; }
@@ -2704,8 +2701,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
   position: fixed;
   right: 0;
-  top: 80px;
+  top: 0;
   bottom: 0;
+  padding-top: 110px;
   background-color: #009FE3;
   z-index: 400;
   transform: translateX(320px);
@@ -2715,7 +2713,8 @@ h1, h2, h3, h4, h5, h6 {
     .main-nav {
       width: 100%;
       transform: translateX(100%);
-      overflow-y: scroll; } }
+      overflow-y: scroll;
+      overflow-x: hidden; } }
   .main-nav.is-open {
     transform: translateX(0); }
   .main-nav ul {
