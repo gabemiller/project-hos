@@ -1,4 +1,19 @@
 .articles {
+  .articles-empty{
+    p{
+      color: $colorShadow;
+      text-align: center;
+      font-size: 1.25rem;
+      display: block;
+      height: 400px;
+      line-height: 400px;
+      @media screen and (max-width: 767px) {
+        font-size: 1.125rem;
+        height: 200px;
+        line-height: 200px;
+      }
+    }
+  }
   .articles-item {
     box-shadow: 0 1px 5px $colorShadow2;
     position: relative;
