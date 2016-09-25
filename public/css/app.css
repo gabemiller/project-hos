@@ -2922,7 +2922,7 @@ h1, h2, h3, h4, h5, h6 {
     .page__header h1 {
       margin: 0; }
   .page__content h1, .page__content h2, .page__content h3, .page__content h4, .page__content h5, .page__content h6 {
-    margin: 30px 0 15px; }
+    margin: 0 0 15px; }
   .page__content p, .page__content ul, .page__content ol {
     font-size: 1.125rem;
     line-height: 1.5;
