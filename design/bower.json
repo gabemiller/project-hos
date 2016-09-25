@@ -24,6 +24,8 @@
     "bootstrap-js-components": "~3.3.4",
     "jquery": "~2.2.0",
     "lightbox2": "^2.8.2",
-    "owl.carousel": "^2.1.6"
+    "owl.carousel": "^2.1.6",
+    "font-awesome": "git://github.com/FortAwesome/Font-Awesome.git#^4.6.3",
+    "video.js": "^5.13.0"
   }
 }
